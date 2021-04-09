@@ -15,6 +15,7 @@ namespace Util.Character
         private float speed = 15f;
 
         public float Speed => speed;
+        
         public Transform Controller => controller;
 
         private void Awake()

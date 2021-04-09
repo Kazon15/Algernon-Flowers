@@ -24,7 +24,7 @@ namespace Game.Enemy
 
         private Collider2D _colliderObject;
 
-        private float _defaultStopingDistance;
+        private float _defaultStoppingDistance;
 
         private Player.Player _player;
 
@@ -38,7 +38,7 @@ namespace Game.Enemy
             agent.updateRotation = false;
             agent.stoppingDistance = rangeToPlayer.x;
             agent.speed = agent.acceleration = Speed * 10;
-            _defaultStopingDistance = agent.stoppingDistance;
+            _defaultStoppingDistance = agent.stoppingDistance;
 
             _player = GameConfig.Instance.Player;
         }
@@ -63,7 +63,7 @@ namespace Game.Enemy
 
             if(range > rangeToPlayer.x)
             {
-                agent.stoppingDistance = _defaultStopingDistance;
+                agent.stoppingDistance = _defaultStoppingDistance;
                 agent.SetDestination(position);
 
                 #if UNITY_EDITOR
